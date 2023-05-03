@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://i.postimg.cc/yxgKFKLM/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-utilities.min.css" integrity="sha512-DEGBrwaCF4lkKzMKNwt8Qe/V54bmJctk7I1HyfINGAIugDvsdBeuWzAWZmXAmm49P6EBfl/OeUM01U3r7cW4jg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel='stylesheet' href='news-homepage-main.css' type='text/css'>
+  <title>Frontend Mentor | News homepage</title>
+
+  
+</head>
+<body>
+      <header class='container'>
+	      <div class='row d-flex flex-row justify-content-between'>
+	         <img class='mt-5 col-2 col-xxl-1' src='images/logo.svg' alt='logo image' width="65" height="40">
+			 <a class='collapse-menu' href='#' aria-label='will close the header navigation menu'><img class='col-2' src='images/icon-menu-close.svg' alt='close menu icon' width="40" height="17"></a>
+			 <a class='open-menu' href='#' aria-label='will open the header navigation menu'><img class='col-2' src='images/icon-menu.svg' alt='open menu icon' width="32" height="31"></a>
+	         <nav aria-label='main page navigation' class='mb-3 ui-menu'>
+                 <div class='ui-menu-item '><a class='col me-5' aria-label='link to Home' href='#'>Home</a></div>
+                 <div class='ui-menu-item'><a class='col me-5' aria-label='link to New'  href='#'>New</a></div>
+                 <div class='ui-menu-item'><a class='col me-5' aria-label='link to popular' href='#'>Popular</a></div>
+                 <div class='ui-menu-item'><a class='col me-5' aria-label='link to trending' href='#'>Trending</a></div>
+                 <div class='ui-menu-item'><a aria-label='link to categories' class='col' href='#'>Categories</a></div>
+		     </nav>
+	      </div>
+      </header>
+	  <main>
+	      <div class='container'>
+		      <div class='row d-flex flex-column flex-xxl-row'>
+                   <div class='col-xxl-8'>
+		             <div class='mt-4'>
+					    <!-- empty alt attributes due to accessbility reason as they are decorative images -->
+		                <img class='col-xxl-12 desktop' src='images/image-web-3-desktop.jpg' alt='' width='1460' height='600'>
+			            <img class='mobile' src='images/image-web-3-mobile.jpg' alt='' width='686' height='600'>
+			         </div>
+				     <div class='height1 mb-2 pb-5 col-xxl-8 d-flex flex-column flex-xxl-row'>
+                        <h1 class='col-xxl-5 align-self-end'>The Bright Future of Web 3.0?</h1>
+					    <div class='p-2 d-flex flex-column align-items-start justify-content-xxl-end'>
+                            <p> We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+                    But is it really fulfilling its promise?</p>
+                            <button type='button' class='text-uppercase btn btn-primary'>Read more</button>
+					    </div>
+			         </div>
+			        </div>
+				
+                  <div class='col-xxl-4 mt-4 dark flex-column justify-content-center'>
+			        <h2 class='col ms-3'> New </h2>
+                    <nav aria-label='links to articles' class='d-flex flex-column'>
+                      <a class='height1 col m-2 d-flex flex-column justify-content-center' href='#'>
+					      <h3>Hydrogen VS Electric Cars</h3>
+                          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+					  </a>
+                      <a class='height1 col m-2 d-flex flex-column justify-content-center' href='#'>
+					      <h3>The Downsides of AI Artistry</h3>
+                          <p>What are the possible adverse effects of on-demand AI image generation?</p>
+                      </a>
+					  <a class='height1 col m-2 d-flex flex-column justify-content-center' href='#'>
+                          <h3>Is VC Funding Drying Up?</h3>
+                          <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+				      </a>
+				    </nav>
+                  </div>
+				
+			 </div>
+			  <div class='row'>
+				  <nav aria-label='more links to articles' class='mb-3 col-xxl-12 d-flex flex-xxl-row flex-column'>
+				     <!--these images could be seen as giving an impression see w3.org link in read.me -->
+                     <a href='#' class='mt-3 d-flex'>
+					    <img src='images/image-retro-pcs.jpg' alt='various retro pc equipment' width='200' height='254'>
+						<div class='pt-1 col-xxl-6 text-start ms-1 d-flex flex-column justify-content-between'>
+    				       <h3>01</h3>
+                           <h3>Reviving Retro PCs</h3>
+                           <p class='space'>What happens when old PCs are given modern upgrades?<p>
+						</div>
+					 </a>
+					 <a href='#' class='mt-3 d-flex'>
+                         <img src='images/image-top-laptops.jpg' alt='neon lighted laptop keyboard' width='200' height='254'>
+						 <div class='pt-1 col-xxl-6 text-start ms-1 d-flex flex-column justify-content-between'>
+						    <h3>02</h3>
+                            <h3>Top 10 Laptops of 2022</h3>
+                            <p class='pt-3'>Our best picks for various needs and budgets.</p>
+						 </div>
+                     </a>
+					 <a href='#' class='mt-3 d-flex'>
+                         <img src='images/image-gaming-growth.jpg' alt='weightless console controllers next' width='200' height='254'>
+						 <div class='pt-1 col-xxl-6 text-start ms-1 d-flex flex-column justify-content-between'>
+					        <h3>03</h3>
+                            <h3> The Growth of Gaming</h3>
+                            <p class='pt-3'>How the plandemic has sparked fresh opportunities.</p>
+						 </div>
+					 </a>
+				  </nav>
+			  </div>
+		  </div>
+      </main>
+      <footer>
+	       <div class="attribution mt-5">
+                <span class='me-2'>Challenge by</span><a class='me-2' href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> 
+                <span class='me-2'>Coded by</span><a href="https://www.frontendmentor.io/profile/cmb347827">CMB</a>
+           </div>
+	  </footer>
+	  
+	  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous"></script>
+      <script src='news-homepage-main.js'></script>
+	  <!--html validated at https://validator.nu/#textarea  on 5-2-2023 -->
+	  <!--scss beautified at https://codebeautify.org/scss-beautifier#  on 5-2-2023 -->
+</body>
+</html>

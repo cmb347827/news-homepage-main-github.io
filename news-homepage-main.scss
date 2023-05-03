@@ -1,0 +1,270 @@
+@import "custom.scss";
+
+$container__form-xs: 375;
+$container__form-xxl: 1440;
+
+$container__form-xxl-min: 1439;
+$font_size-15: 15px;
+
+$font_weight-normal: 400;
+$font_weight-bold: 700;
+$font_weight-extrabold: 800;
+
+$colors: (
+  Soft orange: hsl(35, 77%, 62%),
+  Soft red: hsl(5, 85%, 63%),
+  Off-white: hsl(36, 100%, 99%),
+  Grayish blue: hsl(233, 8%, 79%),
+  Dark grayish blue: hsl(236, 13%, 42%),
+  Very dark blue: hsl(240, 100%, 5%)
+);
+$fallback-colors: (LightSalmon Red Snow LightSteelBlue CadetBlue MidnightBlue);
+
+@mixin font-color($color, $fallback-color) {
+  color: $fallback-color;
+  color: $color;
+}
+
+@mixin bg-color($color, $fallback-color) {
+  background-color: $fallback-color;
+  background-color: $color;
+}
+
+@mixin width($grid-size) {
+  width: $grid-size * 1px;
+}
+@mixin max-width($grid-size) {
+  max-width: $grid-size * 1px;
+}
+@mixin min-width($grid-size) {
+  min-width: $grid-size * 1px;
+}
+@mixin border-radius($radius...) {
+  border-radius: $radius;
+}
+@mixin margin($args...) {
+  margin: $args;
+}
+@mixin padding($args...) {
+  padding: $args;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  font: $font_weight-normal "Inter", sans-serif;
+
+  a {
+    text-decoration: none;
+    @include font-color(
+      map-get($colors, Very dark blue),
+      nth($fallback-colors, 5)
+    );
+  }
+  @media screen and (min-width: $container__form-xxl * 1px) {
+  }
+}
+
+header.container {
+  @include width($container__form-xs);
+  /*in mobile, remove the header links and .collapse-menu button*/
+  .collapse-menu,
+  .ui-menu {
+    display: none;
+	&:focus{
+	  //when displayed in mobile with opened menu.
+	  border: 2px solid map-get($colors, Soft orange);
+	}
+  }
+  .open-menu {
+    /*in mobile, show and position the hamburger icon that will open the menu when clicked*/
+    display: block;
+    position: relative;
+    left: 300px;
+    bottom: 25px;
+	&:focus{
+	   border: 2px solid map-get($colors, Soft orange);
+	}
+  }
+  @media screen and (min-width: $container__form-xxl * 1px) {
+    @include width($container__form-xxl);
+    /*in desktop , remove both the hamburger/close icons for the menu*/
+    .collapse-menu,
+    .open-menu {
+      display: none;
+    }
+    .ui-menu {
+      /*in desktop show the header links */
+      display: flex;
+      justify-content: flex-end;
+      a {
+        font-weight: $font_weight-bold;
+        &:hover {
+          @include font-color(
+            map-get($colors, Soft red),
+            nth($fallback-colors, 2)
+          );
+        }
+      }
+    }
+  }
+}
+
+main {
+  overflow: auto;
+  width: 100%;
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+
+  .container {
+    /*in mobile , remove the desktop version image */
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      /*and in mobile, display the mobile verion image*/
+      display: block;
+      @include width(370);
+    }
+    & > div:first-of-type {
+      /*the first .row div */
+      h1 {
+        font-weight: $font_weight-extrabold;
+      }
+      p {
+        font-size: $font_size-15;
+        @include font-color(
+          map-get($colors, Very dark blue),
+          nth($fallback-colors, 6)
+        );
+      }
+      .btn-primary {
+        width: 200px;
+        border: none;
+        @include bg-color(map-get($colors, Soft red), nth($fallback-colors, 2));
+        &:hover {
+          @include bg-color(
+            map-get($colors, Very dark blue),
+            nth($fallback-colors, 6)
+          );
+          @include font-color(
+            map-get($colors, Off-white),
+            nth($fallback-colors, 3)
+          );
+        }
+      }
+      & > div:nth-of-type(2) {
+        /*the first .row div, and the second div within that */
+        h2 {
+          @include font-color(
+            map-get($colors, Soft orange),
+            nth($fallback-colors, 1)
+          );
+        }
+        a:not(:nth-of-type(3)) {
+          border-bottom: 1px solid map-get($colors, Grayish blue);
+        }
+        h3 {
+          @include font-color(
+            map-get($colors, Off-white),
+            nth($fallback-colors, 3)
+          );
+          &:hover {
+            @include font-color(
+              map-get($colors, Soft orange),
+              nth($fallback-colors, 1)
+            );
+          }
+        }
+        p {
+          @include font-color(
+            map-get($colors, Grayish blue),
+            nth($fallback-colors, 4)
+          );
+        }
+      }
+    }
+    & > div:nth-of-type(2) {
+      /*the second .row div */
+      img {
+        transform: scale(0.9, 0.9);
+      }
+      h3:first-of-type {
+        @include font-color(
+          map-get($colors, Grayish blue),
+          nth($fallback-colors, 4)
+        );
+        font-size: $font_weight-bold;
+      }
+      h3:nth-of-type(2) {
+        @include font-color(
+          map-get($colors, Very dark blue),
+          nth($fallback-colors, 6)
+        );
+        font-weight: $font_weight-extrabold;
+        &:hover {
+          @include font-color(
+            map-get($colors, Soft red),
+            nth($fallback-colors, 2)
+          );
+        }
+      }
+      p {
+        @include font-color(
+          map-get($colors, Very dark blue),
+          nth($fallback-colors, 6)
+        );
+      }
+      .space {
+        @include margin(40px 0 0 0);
+      }
+      @media screen and (min-width: $container__form-xxl * 1px) {
+        .space {
+          @include margin(75px 0 0 0);
+        }
+      }
+    }
+
+    .dark {
+      @include bg-color(
+        map-get($colors, Very dark blue),
+        nth($fallback-colors, 6)
+      );
+    }
+
+    @include width($container__form-xs);
+
+    @media screen and (min-width: $container__form-xxl * 1px) {
+      .height1 {
+        min-height: 260px;
+      }
+      /*in desktop, display the desktop version image*/
+      .desktop {
+        display: block;
+      }
+      /*and remove the mobile version image*/
+      .mobile {
+        display: none;
+      }
+      @include width($container__form-xxl);
+    }
+  }
+}
+
+footer {
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+}
