@@ -12991,10 +12991,10 @@ main {
           color: #e9ab53; }
         main .container > div:first-of-type > div:nth-of-type(2) a:not(:nth-of-type(3)) {
           border-bottom: 1px solid #c5c6ce; }
-        main .container > div:first-of-type > div:nth-of-type(2) h3, main .container > div:first-of-type > div:nth-of-type(2) .h3 {
+        main .container > div:first-of-type > div:nth-of-type(2) a h2, main .container > div:first-of-type > div:nth-of-type(2) a .h2 {
           color: Snow;
           color: #fffdfa; }
-          main .container > div:first-of-type > div:nth-of-type(2) h3:hover, main .container > div:first-of-type > div:nth-of-type(2) .h3:hover {
+          main .container > div:first-of-type > div:nth-of-type(2) a h2:hover, main .container > div:first-of-type > div:nth-of-type(2) a .h2:hover {
             color: LightSalmon;
             color: #e9ab53; }
         main .container > div:first-of-type > div:nth-of-type(2) p {
