@@ -13033,6 +13033,8 @@ main {
         width: 1440px; }
         main .container .height1 {
           min-height: 260px; }
+        main .container .height2 {
+          min-height: 228px; }
         main .container .desktop {
           display: block; }
         main .container .mobile {
